@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgroundblur"
+    tools:context=".customerActivities.ConfirmMeasurementActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/newsshorts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upperrounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Tailorz"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/customer_profile"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/profile_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/heading_measurement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Confirm Your Measurement"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newsshorts" />
+
+
+    <TextView
+        android:id="@+id/height_Confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcorners"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Arm length : XX meters"
+        app:layout_constraintTop_toBottomOf="@+id/heading_measurement" />
+
+    <TextView
+        android:id="@+id/calf_Confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcorners"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="leg Length : XX meters"
+        app:layout_constraintTop_toBottomOf="@+id/height_Confirm" />
+
+    <TextView
+        android:id="@+id/thigh_Confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcorners"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Waist Length : XX meters"
+        app:layout_constraintTop_toBottomOf="@+id/calf_Confirm" />
+
+    <TextView
+        android:id="@+id/Arms_Confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcorners"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Shoulder to Knee Length : XX meters"
+        app:layout_constraintTop_toBottomOf="@+id/thigh_Confirm" />
+
+    <TextView
+        android:id="@+id/legs_Confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedcorners"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Chest Length : XX meters"
+        app:layout_constraintTop_toBottomOf="@+id/Arms_Confirm" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/legs_Confirm">
+
+        <com.apachat.loadingbutton.core.customViews.CircularProgressButton
+            android:id="@+id/confirm_Measurement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/roundedcorners"
+            android:backgroundTint="@color/black"
+            android:text="Confirm Measurement"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:spinning_bar_color="@color/white"
+            app:spinning_bar_padding="8dp"
+            app:spinning_bar_width="4dp">
+
+        </com.apachat.loadingbutton.core.customViews.CircularProgressButton>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/goBackTxt"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go back to measurement to save in profile"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        android:gravity="center"
+        android:textColor="#656363"/>
+
+    <Button
+        android:id="@+id/retake_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/roundedcorners"
+        android:layout_margin="10dp"
+        android:text="Retake"
+        android:textSize="18sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

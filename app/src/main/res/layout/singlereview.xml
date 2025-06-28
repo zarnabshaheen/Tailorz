@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:backgroundTint="#68A8A2A2"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:src="@drawable/shoulders" />
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hassan Ali"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:layout_toEndOf="@id/iv_user_profile"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/customer_rating"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/iv_user_profile"
+            android:src="@drawable/favorites_icon"
+            android:layout_below="@id/customer_name"
+            />
+
+        <TextView
+            android:id="@+id/customer_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Very Good tailor. In Time Dilverey and very good sticthing"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/iv_user_profile"
+            android:layout_below="@id/customer_rating"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

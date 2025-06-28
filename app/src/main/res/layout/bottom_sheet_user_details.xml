@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bottom_sheet_background"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text="Customer Details"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <!-- User Name -->
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="Name: "
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <!-- Address -->
+    <TextView
+        android:id="@+id/tv_user_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="Address: "
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <!-- Phone -->
+    <TextView
+        android:id="@+id/tv_user_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="Phone: "
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <!-- Measurements -->
+    <TextView
+        android:id="@+id/tv_user_measurements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="Measurements: "
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <!-- Close Button -->
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#518EF8"
+        app:cornerRadius="12dp"
+        android:fontFamily="@font/poppin_regular"
+        android:padding="10dp"
+        android:text="Close"
+        android:textColor="@color/white" />
+</LinearLayout>

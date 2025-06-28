@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Design Name -->
+        <TextView
+            android:id="@+id/tv_design_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Design Name: "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Tailor Name -->
+        <TextView
+            android:id="@+id/tv_tailor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tailor Name: "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_below="@id/tv_design_name"
+            android:layout_marginTop="8dp" />
+
+        <!-- Order Status -->
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Status: "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_below="@id/tv_tailor_name"
+            android:layout_marginTop="8dp" />
+        <!-- Date -->
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Date: "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_below="@id/tv_order_status"
+            android:layout_marginTop="8dp" />
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Time: "
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_below="@id/tv_date"
+            android:layout_marginTop="8dp" />
+
+        <!-- Cancel Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Cancel"
+            android:textSize="@dimen/_10sdp"
+            app:cornerRadius="12dp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:backgroundTint="#518EF8"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:layout_below="@id/ll_payment" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Delete"
+            android:textSize="@dimen/_10sdp"
+            app:cornerRadius="12dp"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:backgroundTint="#518EF8"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/tv_time" />
+
+        <LinearLayout
+            android:id="@+id/ll_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_time"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_payment_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment: "
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_payment_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click here to pay"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

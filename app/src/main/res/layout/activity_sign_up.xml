@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".register.SignUp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="TAILORZ"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="#92FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2000dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title">
+
+            <RelativeLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/emailtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppin_regular"
+                    android:background="@drawable/rounded_bakcground"
+                    android:hint="Email"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/mobileNotxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emailtxt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppin_regular"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:maxLength="11"
+                    android:background="@drawable/rounded_bakcground"
+                    android:hint="Mobile Number"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/usernametxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mobileNotxt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppin_regular"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:maxLength="11"
+                    android:background="@drawable/rounded_bakcground"
+                    android:hint="User Name"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/passwordtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/usernametxt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppin_regular"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:maxLength="11"
+                    android:background="@drawable/rounded_bakcground"
+                    android:hint="Password"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/confirmPasswordtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/passwordtxt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppin_regular"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:maxLength="11"
+                    android:background="@drawable/rounded_bakcground"
+                    android:hint="Confirm Password"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/confirmPasswordtxt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppin_regular"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:maxLength="60"
+                    android:background="@drawable/rounded_bakcground"
+                    android:hint="Address"
+                    android:padding="15dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/genderCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_address"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/rounded_bakcground">
+
+                        <TextView
+                            android:id="@+id/gendertxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Gender"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_15sdp"
+                            android:fontFamily="@font/poppins_semibold">
+
+                        </TextView>
+
+                        <RadioGroup
+                            android:id="@+id/genderRadioGrpId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gendertxt"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/maleRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="50dp"
+                                android:text="Male"
+                                android:fontFamily="@font/poppin_regular"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <RadioButton
+                                android:id="@+id/femaleRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Female"
+                                android:fontFamily="@font/poppin_regular"
+                                android:textSize="@dimen/_12sdp"
+                                 />
+
+
+                        </RadioGroup>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/categoryCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genderCard"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                   >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@drawable/rounded_bakcground">
+
+                        <TextView
+                            android:id="@+id/categorytxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="I Am"
+                            android:textSize="@dimen/_15sdp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:textColor="@color/black"
+                           >
+
+                        </TextView>
+
+                        <RadioGroup
+                            android:id="@+id/categoryRadioGrp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/categorytxt"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/tailorRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="50dp"
+                                android:text="Tailor"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <RadioButton
+                                android:id="@+id/customerRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Customer"
+                                android:fontFamily="@font/poppin_regular"
+                                android:textSize="@dimen/_12sdp"  />
+
+
+                        </RadioGroup>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tailorCategoryCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/categoryCard"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/Tailorcategorytxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="I Am a (* Only for tailors)"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_11sdp"
+                            android:fontFamily="@font/poppins_semibold">
+
+                        </TextView>
+
+                        <RadioGroup
+                            android:id="@+id/TailorcategoryRadioGrp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Tailorcategorytxt"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/MaletailorRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="0dp"
+                                android:text="Male Tailor"
+                                android:fontFamily="@font/poppin_regular"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <RadioButton
+                                android:id="@+id/FemaletailorRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Female Tailor"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/poppin_regular"
+                                android:textSize="@dimen/_10sdp"/>
+
+                            <RadioButton
+                                android:id="@+id/BothtailorRadioBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Both"
+                                android:fontFamily="@font/poppin_regular"
+                                android:checked="true"
+                                android:textSize="@dimen/_10sdp" />
+
+
+                        </RadioGroup>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tailorCategoryCard"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp">
+
+                    <com.apachat.loadingbutton.core.customViews.CircularProgressButton
+                        android:id="@+id/signUpBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/roundedcorners"
+                        android:backgroundTint="#518EF8"
+                        android:fontFamily="@font/poppin_regular"
+                        android:text="Sign Up"
+
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:spinning_bar_color="@color/white"
+                        app:spinning_bar_padding="8dp"
+                        app:spinning_bar_width="4dp">
+
+                    </com.apachat.loadingbutton.core.customViews.CircularProgressButton>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TextView
+                android:id="@+id/alreadyHaveAnAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#ECE9E9"
+                android:text="Already have an account?"
+                android:layout_marginEnd="5dp"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/clickheretxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/alreadyHaveAnAccount"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="click here">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+

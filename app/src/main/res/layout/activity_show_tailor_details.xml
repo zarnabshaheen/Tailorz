@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".customerActivities.ShowTailorDetails">
+
+    <!-- ScrollView to enable scrolling if needed -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="12dp">
+
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/back_arrow"
+                android:contentDescription="Back"
+                android:padding="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="start"
+                android:background="?attr/selectableItemBackground" />
+
+            <!-- Tailor Profile Image -->
+            <ImageView
+                android:id="@+id/ivTailorProfile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Tailor Profile"
+                android:src="@drawable/imagenotfound"
+                android:background="@android:color/darker_gray"
+                android:elevation="4dp"
+                android:padding="4dp" />
+
+            <!-- Tailor Name -->
+            <TextView
+                android:id="@+id/tvTailorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tailor Name"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="12dp" />
+
+            <!-- Tailor Category -->
+            <TextView
+                android:id="@+id/tvTailorCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppin_regular"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="4dp" />
+
+            <!-- Contact & Address Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <!-- Tailor Contact -->
+                <TextView
+                    android:id="@+id/tvTailorContact"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Contact: 0000000000"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppin_regular"
+                    android:textColor="@android:color/black"
+                    android:padding="6dp"
+                    android:gravity="center" />
+
+                <!-- Tailor Address -->
+                <TextView
+                    android:id="@+id/tvTailorAddress"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppin_regular"
+                    android:textColor="@android:color/black"
+                    android:padding="6dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Divider Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/darker_gray"/>
+
+            <!-- Designs Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AVAILABLE DESIGNS"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- RecyclerView for Designs (Pinned to Bottom) -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTailorDesigns"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:paddingBottom="16dp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnGiveFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Give feedback"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
+                android:backgroundTint="@color/divider_color"
+                android:layout_marginTop="16dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

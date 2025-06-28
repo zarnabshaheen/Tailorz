@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:id="@+id/customerCard"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2000dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+
+            <TextView
+                android:id="@+id/customerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hassan"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+                android:id="@+id/userGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/customerName"
+                android:layout_marginStart="5dp"
+                />
+
+
+            <TextView
+                android:id="@+id/customerCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer"
+                android:layout_below="@id/userGender"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="5dp"
+                />
+
+
+            <TextView
+                android:id="@+id/userContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="03341891827"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/customerCategory"
+                android:layout_marginStart="5dp"
+                />
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

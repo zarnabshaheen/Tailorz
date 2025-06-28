@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="wrap_content"
+    android:background="@drawable/backgroundblur"
+    tools:context=".customerActivities.CompleteOrdersActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/newsshorts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/upperrounded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Tailorz"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/back_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/customer_profile"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/profile_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/markAsCompleted"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mark Order as Complete"
+            android:textAllCaps="false"
+            android:background="@drawable/roundedcorners"
+            android:drawableEnd="@drawable/checkbutton"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/newsshorts"
+            />
+
+        <TextView
+            android:id="@+id/designName_orders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Design Name "
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/markAsCompleted" />
+
+        <TextView
+            android:id="@+id/tailorName_orders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tailor Name"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/designName_orders" />
+
+        <TextView
+            android:id="@+id/DesignID_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Design ID"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/tailorName_orders" />
+
+        <TextView
+            android:id="@+id/OrderID_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order ID"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/DesignID_order" />
+
+        <TextView
+            android:id="@+id/DeliveryAddress_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Address"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/OrderID_order" />
+
+        <TextView
+            android:id="@+id/CustomerWhatsapp_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Whatsapp"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/DeliveryAddress_order" />
+
+        <TextView
+            android:id="@+id/CustomerTelephone_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Telephone"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/CustomerWhatsapp_order" />
+
+        <TextView
+            android:id="@+id/OrderDate_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Date"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/CustomerTelephone_order" />
+
+        <TextView
+            android:id="@+id/TailorAddress_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tailor Address"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/OrderDate_order" />
+
+        <TextView
+            android:id="@+id/TailorWhatsapp_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tailor Whatsapp"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/TailorAddress_order" />
+
+        <TextView
+            android:id="@+id/TailorTelephone_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tailor Telephone"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/TailorWhatsapp_order" />
+
+        <TextView
+            android:id="@+id/CustomerGender_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/TailorTelephone_order" />
+
+        <TextView
+            android:id="@+id/CompletionExpectedBy_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Completion Expected By"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/CustomerGender_order" />
+
+        <TextView
+            android:id="@+id/CustomerWaistMeasurement_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Waist Measurement"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/CompletionExpectedBy_order" />
+
+        <TextView
+            android:id="@+id/CustomerCollarMeasurement_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Collar Measurement"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/CustomerWaistMeasurement_order" />
+
+        <TextView
+            android:id="@+id/CustomerChestMeasurement_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Chest Measurement"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/CustomerCollarMeasurement_order" />
+
+        <TextView
+            android:id="@+id/CustomerShoulderMeasurement_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Shoulder Measurement"
+            android:background="@drawable/roundedcorners"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/CustomerChestMeasurement_order" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

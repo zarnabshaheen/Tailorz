@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@android:color/white"
+    tools:context=".customerFragments.Customer_tailors_fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/search_background"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/search_icone"
+            android:layout_marginStart="10dp"
+            app:tint="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/searchTailorEditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Search tailors..."
+            android:textSize="16sp"
+            android:paddingStart="10dp"
+            android:background="@null"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"/>
+    </LinearLayout>
+
+    <!-- FrameLayout to position ProgressBar above RecyclerView -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- RecyclerView for Tailors -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Customer_Tailors_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <!-- ProgressBar Centered -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+        <!-- No Designs Found Message Centered -->
+        <TextView
+            android:id="@+id/noDesignsFound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Tailor Found"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppin_regular"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+</LinearLayout>

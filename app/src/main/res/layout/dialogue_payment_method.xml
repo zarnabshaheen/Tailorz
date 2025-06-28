@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_background">
+
+    <!-- Account Number Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:id="@+id/tv_account_number"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Account Number: Not Available"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:paddingEnd="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy"
+            app:cornerRadius="50dp"
+            app:iconPadding="8dp"
+            app:iconGravity="textStart"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textColor="@color/primaryColor"
+            android:backgroundTint="@android:color/transparent"
+            app:strokeColor="@color/primaryColor"
+            app:strokeWidth="2dp" />
+    </LinearLayout>
+
+    <!-- Payment Options -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_easypaisa"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Pay with EasyPaisa"
+        android:textAllCaps="false"
+        app:cornerRadius="16dp"
+        android:layout_gravity="center"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#518EF8"
+        android:layout_marginTop="16dp"
+        app:iconPadding="8dp"
+        app:iconGravity="textStart" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_jazzcash"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Pay with JazzCash"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        app:cornerRadius="16dp"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#518EF8"
+        android:layout_marginTop="12dp"
+
+        app:iconPadding="8dp"
+        app:iconGravity="textStart" />
+
+</LinearLayout>

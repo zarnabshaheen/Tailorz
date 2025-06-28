@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tailorz"
+        tools:targetApi="31">
+        <activity
+            android:name=".payment.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customerActivities.ShowTailorDetails"
+            android:exported="false" />
+        <activity
+            android:name=".tailorActivities.TailorChatListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".tailorActivities.TailorChatScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customerActivities.CustomerChatScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customerActivities.CustomerChatActivity"
+            android:exported="false" />
+        <activity android:name=".customerActivities.GiveFeedbackActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".tailorActivities.TailorNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".adminPanel.AdminMainPanel"
+            android:exported="false" />
+        
+        <activity
+            android:name=".customerActivities.MoreDesignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customerActivities.CustomerNotification_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".customerActivities.Customer_profile"
+            android:exported="false" />
+        <activity
+            android:name=".customerActivities.HireMeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customerActivities.Customer_desingDetails"
+            android:exported="false" />
+        <activity
+            android:name=".customerActivities.CustomerMain"
+            android:exported="true" />
+        <activity
+            android:name=".tailorActivities.TailorMain"
+            android:exported="false" />
+        <activity
+            android:name=".register.Login"
+            android:exported="true" />
+        <activity
+            android:name=".register.SignUp"
+            android:exported="true" />
+
+
+    </application>
+
+</manifest>

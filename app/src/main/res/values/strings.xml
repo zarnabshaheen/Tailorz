@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tailorz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="instructions">Stand Straight in front of the Camera at the following Angle</string>
+    <string name="do_not_have_an_account">Do not have an account?</string>
+    <string name="click_here">Click here</string>
+</resources>

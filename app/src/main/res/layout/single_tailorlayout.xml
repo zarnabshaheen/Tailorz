@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Profile Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/TailorProfileImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/dummy"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/black"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Tailor Info (Name & Category) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tailorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hassan Ali"
+                android:fontFamily="@font/poppin_regular"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tailorCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male Tailor"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppin_regular"
+                android:textColor="@android:color/darker_gray"/>
+        </LinearLayout>
+
+        <!-- Chat Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat Now"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:fontFamily="@font/poppin_regular"
+            app:cornerRadius="12dp"
+            android:backgroundTint="#518EF8"
+            android:elevation="4dp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

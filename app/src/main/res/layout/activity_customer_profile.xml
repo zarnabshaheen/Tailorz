@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".customerActivities.Customer_profile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/newsshorts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/upperrounded"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Tailorz"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/back_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/logout_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/logout_icone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/customerProfileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/dummy"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newsshorts" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/edit_profile_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/edit_icon"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:background="@drawable/fullroundedcorners"
+            app:layout_constraintBottom_toBottomOf="@+id/customerProfileImage"
+            app:layout_constraintEnd_toEndOf="@+id/customerProfileImage" />
+        <Button
+            android:id="@+id/open_easy_paisa_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Easy Paisa"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/customerProfileImage"
+            app:layout_constraintBottom_toBottomOf="@id/customerProfileImage"
+            app:layout_constraintTop_toTopOf="@id/customerProfileImage"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@android:color/white"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileInformationCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:padding="10dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/customerProfileImage">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/profileHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Your Profile Information"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/UserNametxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/profileHeading"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/roundedcorners"
+                    android:drawableStart="@drawable/user"
+                    android:drawablePadding="10dp"
+                    android:hint="User Name"
+                    android:editable="false"
+                    android:maxLines="3"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/gendertxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/UserNametxt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/roundedcorners"
+                    android:drawableStart="@drawable/gender"
+                    android:drawablePadding="10dp"
+                    android:hint="Gender"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/emailtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/gendertxt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/roundedcorners"
+                    android:drawableStart="@drawable/email"
+                    android:drawablePadding="10dp"
+                    android:hint="Your Email"
+                    android:maxLines="1"
+                    android:padding="15dp" />
+
+
+                <com.apachat.loadingbutton.core.customViews.CircularProgressButton
+                    android:id="@+id/saveProfileInfoBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emailtxt"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="#518EF8"
+                    android:padding="20dp"
+                    android:text="Save Profile Information"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:spinning_bar_color="@color/white"
+                    app:spinning_bar_padding="8dp"
+                    app:spinning_bar_width="4dp" />
+
+            </RelativeLayout>
+            <!-- Progress Bar (Centered) -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="30dp"
+                style="?android:attr/progressBarStyleLarge"
+                app:layout_constraintTop_toBottomOf="@id/profileInformationCard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ContactInfoCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:padding="10dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileInformationCard">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/contactHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="Your Contact Information"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/addresstxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/contactHeading"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/roundedcorners"
+                    android:drawableStart="@drawable/locationicon"
+                    android:drawablePadding="10dp"
+                    android:hint="Your Delivery Address"
+                    android:maxLines="3"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/telephonetxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addresstxt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/roundedcorners"
+                    android:drawableStart="@drawable/phoneicon"
+                    android:drawablePadding="10dp"
+                    android:hint="Your Home Number"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:id="@+id/whatsapptxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/telephonetxt"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/roundedcorners"
+                    android:drawableStart="@drawable/whatsapp_icon"
+                    android:drawablePadding="10dp"
+                    android:hint="Your Whatsapp"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:padding="15dp" />
+
+
+                <com.apachat.loadingbutton.core.customViews.CircularProgressButton
+                    android:id="@+id/saveContactBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/whatsapptxt"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="#518EF8"
+                    android:padding="20dp"
+                    android:text="Save Contact Information"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:spinning_bar_color="@color/white"
+                    app:spinning_bar_padding="8dp"
+                    app:spinning_bar_width="4dp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/measurementCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:padding="10dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ContactInfoCard">
+
+                <TextView
+                    android:id="@+id/measurementHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:text="Your Measurements"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                    android:layout_marginTop="@dimen/_30sdp">
+
+                        <!-- Chest Measurement -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center_vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/chest_icone"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:contentDescription="Chest Icon" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="16dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Chest"
+                                    android:textSize="16sp"
+                                    android:fontFamily="@font/poppin_regular"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/et_chest_measurement"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter chest measurement (inches)"
+                                    android:inputType="text"
+                                    android:textSize="16sp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:background="@drawable/roundedcorners"
+                                    android:padding="8dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center_vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/waist_icone"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:contentDescription="Waist Icon" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="16dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Waist"
+                                    android:textSize="16sp"
+                                    android:fontFamily="@font/poppin_regular"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/et_waist_measurement"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter waist measurement (inches)"
+                                    android:inputType="text"
+                                    android:textSize="16sp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:background="@drawable/roundedcorners"
+                                    android:padding="8dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center_vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/arms_icone"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:contentDescription="Arms Icon" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="16dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Arms"
+                                    android:textSize="16sp"
+                                    android:fontFamily="@font/poppin_regular"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                                <EditText
+                                    android:id="@+id/et_arm_measurement"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter arms measurement (inches)"
+                                    android:inputType="text"
+                                    android:textSize="16sp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:background="@drawable/roundedcorners"
+                                    android:padding="8dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Legs Measurement -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:gravity="center_vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/legs_icone"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:contentDescription="Legs Icon" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="16dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Legs"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/poppin_regular"
+                                    android:textColor="@color/black"/>
+
+                                <EditText
+                                    android:id="@+id/et_legs_measurement"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter legs measurement (inches)"
+                                    android:inputType="text"
+                                    android:textSize="16sp"
+                                    android:fontFamily="@font/poppin_regular"
+                                    android:textColor="@color/black"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:background="@drawable/roundedcorners"
+                                    android:padding="8dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Shoulder to Knee Measurement -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/shoulder_to_knee"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:contentDescription="Shoulder to Knee Icon" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:paddingStart="16dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shoulder to Knee"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="@font/poppin_regular"
+                                    android:textColor="@color/black"/>
+
+                                <EditText
+                                    android:id="@+id/et_full_measurement"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Enter measurement (inches)"
+                                    android:inputType="text"
+                                    android:textSize="16sp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:background="@drawable/roundedcorners"
+                                    android:padding="8dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

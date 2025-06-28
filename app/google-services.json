@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "763455297040",
+    "firebase_url": "https://flashspark-1c928-default-rtdb.firebaseio.com",
+    "project_id": "flashspark-1c928",
+    "storage_bucket": "flashspark-1c928.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763455297040:android:977668fa87b10cf589dc95",
+        "android_client_info": {
+          "package_name": "com.example.tailorz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763455297040-6lj9p67eutd8k79f9khcdh87q45djlqn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA00a0UfqSYvCknHc6OwaDk4x5zK8wXX0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763455297040-6lj9p67eutd8k79f9khcdh87q45djlqn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

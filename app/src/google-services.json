@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "633866461415",
+    "firebase_url": "https://tailorz-aa1b7-default-rtdb.firebaseio.com",
+    "project_id": "tailorz-aa1b7",
+    "storage_bucket": "tailorz-aa1b7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633866461415:android:dfd2dc0ceb69e79a050242",
+        "android_client_info": {
+          "package_name": "com.example.tailorz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5uk_BxwRNtVWSUhOp5j60n5keWqEsilI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
